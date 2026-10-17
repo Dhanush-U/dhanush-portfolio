@@ -3,26 +3,26 @@ import { Mail, User, Zap } from 'lucide-react';
 
 export const SITE_CONFIG = {
   profile: {
-    name: 'Pragadesh',
-    displayName: 'Pragadesh V',
-    username: 'psparwez',
+    name: 'Dhanush',
+    displayName: 'Dhanush U',
+    username: 'Dhanush-U',
     avatar: '/images/profile.png',
     description:
-      'Experienced web developer from Kerala, India, with a passion for crafting seamless digital experiences and a proven track record.',
-    jobTitle: 'Frontend Developer',
+      'UI/UX and WordPress designer from Tamil Nadu, India, with 3+ years crafting high-performing, conversion-focused web experiences — designing in Figma and shipping polished, responsive, live pages.',
+    jobTitle: 'UI/UX & WordPress Designer',
   },
   // Storing Cal.com booking preferences safely in one place
   booking: {
-    calUsername: 'psparwez',
+    calUsername: 'dhanush', // CHANGE: your Cal.com username (needs a free cal.com account), or we can switch this button to email
     namespace: '15min',
     defaultLayout: 'month_view', // "month_view" | "week_view" | "column_view"
   },
 
   SITE_INFO: {
-    title: 'PS Parwez • Developer Portfolio',
+    title: 'Dhanush U • UI/UX & WordPress Designer',
     description:
-      'The personal portfolio of PS Parwez — Front-end developer specializing in building fast, accessible, and visually appealing web experiences with React, Next.js, and modern UI design.',
-    url: process.env.SITE_URL || 'https://dark-portfolio-site.vercel.app',
+      'The portfolio of Dhanush U — UI/UX and WordPress designer specializing in conversion-focused, accessible, and visually polished web experiences.',
+    url: process.env.SITE_URL || 'https://dhanush-portfolio.vercel.app',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
@@ -49,19 +49,19 @@ export const MAIN_MENU = [
 
 export const SOCIAL_LINKS = [
   {
-    label: 'Instagram',
-    icon: ICONS.socials.instagram,
-    link: 'https://www.instagram.com/',
+    label: 'LinkedIn',
+    icon: ICONS.socials.linkedin,
+    link: 'https://www.linkedin.com/in/dhanush-u', // CHANGE: confirm your exact LinkedIn URL
   },
   {
     label: 'Github',
     icon: ICONS.socials.github,
-    link: 'https://github.com/psparwez/portfolio',
+    link: 'https://github.com/Dhanush-U',
   },
   {
-    label: 'Twitter',
-    icon: ICONS.socials.x,
-    link: 'https://www.twitter.com/psparwez',
+    label: 'Behance',
+    icon: ICONS.socials.behance,
+    link: 'https://www.behance.net/dhanushu', // CHANGE: confirm your exact Behance URL
   },
 ];
 
@@ -102,57 +102,57 @@ export const COUNTER_LISTS = [
   {
     id: 1,
     title: 'Happy Clients',
-    value: 45,
+    value: 30,
   },
   {
     id: 2,
-    title: 'Year of Experience',
-    value: 2,
+    title: 'Years of Experience',
+    value: 3,
   },
   {
     id: 3,
-    title: 'Completed Tasks',
-    value: 40,
+    title: 'Websites Launched',
+    value: 80,
   },
   {
     id: 4,
-    title: 'Awards Received',
-    value: 6,
+    title: 'UI Patterns Built',
+    value: 400,
   },
 ];
 
 export const EXPERIENCE_LISTS = [
   {
     id: 1,
-    year: '2023 - Present',
-    title: 'Product Designer',
-    company: 'Vortex',
-    label: 'Tech Firm',
+    year: '2024 - Present',
+    title: 'Design Specialist',
+    company: 'Brainstorm Force',
+    label: 'WordPress Product Company',
     description:
-      'Headed product design initiatives, defined design strategy, and ensured alignment with business objectives for market-leading products.',
-    link: 'vortex.com',
+      'Design across flagship WordPress products including Astra, Spectra and ZipWP. Led the Spectra website redesign and shipped a Gutenberg block end to end, from Figma to production.',
+    link: 'brainstormforce.com',
     logo: ICONS.experienceCompaniesLogos.Vortex,
   },
   {
     id: 2,
-    year: '2022 - 2023',
-    title: 'Senior UI/UX Designer',
-    company: 'PixelWorks',
+    year: '2024',
+    title: 'Senior Web Developer',
+    company: 'Cubic Designz',
     label: 'Design Studio',
     description:
-      'Provided leadership in UI/UX design, mentored junior designers, and collaborated with cross-functional teams for product excellence.',
-    link: 'pixelworks.io',
+      'Built 10+ interactive GSAP animations, delivered custom UI in Figma and front-end code, and mentored a team of five to improve delivery efficiency.',
+    link: 'cubicdesignz.com',
     logo: ICONS.experienceCompaniesLogos.PixelWorks,
   },
   {
     id: 3,
-    year: '2020 - 2022',
-    title: 'UI/UX Designer',
-    company: 'Athon',
-    label: 'Tech Start-up',
+    year: '2023 - 2024',
+    title: 'Web Designer & Developer',
+    company: 'FyerX',
+    label: 'Digital Marketing Agency',
     description:
-      'Led UI/UX design projects from concept to delivery, conducted user testing, and iterated designs for optimal user experience.',
-    link: 'athon.com',
+      'Designed and launched 50+ responsive websites on WordPress and Shopify, lifting organic traffic by 40% and cutting page load times by 30%.',
+    link: 'fyerx.com',
     logo: ICONS.experienceCompaniesLogos.Athon,
   },
 ];
@@ -205,26 +205,26 @@ export const STACK_LISTS = [
 export const SERVICES = [
   {
     id: 1,
-    title: 'Web Design',
-    description: 'Crafting visually captivating and user-friendly websites for online success.',
+    title: 'UI/UX Design',
+    description: 'Designing intuitive, user-friendly interfaces that turn visitors into customers.',
     icon: ICONS.services.webDesign,
   },
   {
     id: 2,
-    title: 'Web Development',
-    description: 'Bringing ideas to life with robust and scalable web solutions.',
+    title: 'WordPress Development',
+    description: 'Building fast, scalable WordPress sites with clean, custom front-end code.',
     icon: ICONS.services.webdev,
   },
   {
     id: 3,
-    title: 'Graphic Design',
-    description: 'Creating visually stunning designs that captivate and engage audiences.',
+    title: 'Landing Page Design',
+    description: 'Crafting conversion-focused landing pages that look sharp on every device.',
     icon: ICONS.services.graphicDesign,
   },
   {
     id: 4,
-    title: 'SEO Optimization',
-    description: 'Elevating online visibility and driving organic traffic through strategies.',
+    title: 'SEO & Performance',
+    description: 'Improving visibility and page speed to drive organic traffic and better rankings.',
     icon: ICONS.services.seo,
   },
 ];
@@ -232,121 +232,118 @@ export const SERVICES = [
 export const SHOW_CASE_PROJECTS = [
   {
     id: 1,
-    title: 'Devcraft',
-    description: 'Showcasing expertise, passion, and innovation in the realm of development.',
-    link: 'vortex.com',
-    type: 'Portfolio',
+    title: 'Spectra Website Redesign',
+    description:
+      'Led a full redesign and rebuild, preserving SEO rankings while lifting conversions across all devices.',
+    link: 'wpspectra.com',
+    type: 'Product Website',
     theme: 'Dark',
-    pages: 4,
+    pages: 8,
     image: '/images/projects/project-1.webp',
   },
   {
     id: 2,
-    title: 'Zenith Gym',
-    description: 'Empowering fitness enthusiasts with an immersive online experience.',
-    link: 'zenith.com',
-    type: 'Fitness',
-    theme: 'Light',
-    pages: 5,
+    title: 'Spectra Marquee Block',
+    description:
+      'Designed and shipped a Gutenberg block end to end, from Figma to production, via a GitHub workflow.',
+    link: 'wpspectra.com',
+    type: 'WordPress Block',
+    theme: 'Dark',
+    pages: 1,
     image: '/images/projects/project-2.webp',
   },
   {
     id: 3,
-    title: 'Novus Agency',
-    description: 'Transforming ideas into digital realities with creativity and expertise.',
-    link: 'novus.com',
-    type: 'Business',
+    title: 'GSAP Animation Suite',
+    description:
+      'Built 10+ interactive scroll and motion animations that increased user engagement by 30%.',
+    link: '',
+    type: 'Interactive',
     theme: 'Dark',
-    pages: 6,
+    pages: 3,
     image: '/images/projects/project-3.webp',
   },
   {
     id: 4,
-    title: 'Apex Agency',
+    title: 'Client Website Collection',
     description:
-      'Setting the pinnacle of digital excellence with cutting-edge solutions and creativity.',
-    link: 'apex.com',
-    type: 'Business',
+      'A set of responsive WordPress and Shopify sites delivered across industries, focused on UX and speed.',
+    link: '',
+    type: 'Web Design',
     theme: 'Light',
-    pages: 6,
+    pages: 30,
     image: '/images/projects/project-4.webp',
   },
 ];
 
+// NOTE: These are placeholder testimonials. Replace them with real client
+// quotes before you share the site — do not publish invented testimonials.
 export const TESTINOMIALS = [
   {
     id: 1,
-    name: 'Sarah Thompson',
+    name: 'Client name',
     description:
-      'I am thrilled with the website for my business. His ability to translate my vision into a visually stunning...',
-    location: 'New York City, USA.',
+      'Dhanush turned our outdated website into a fast, modern, conversion-focused experience. The attention to detail stood out.',
+    location: 'Add location',
     avatar: '/images/clients/client-1.webp',
   },
   {
     id: 2,
-    name: 'John Anderson',
+    name: 'Client name',
     description:
-      'Working with Pragadesh was a game-changer for my online business. His web design skills are exceptional.',
-    location: 'Sydney, Australia.',
+      'Clear communication, sharp design sense, and he ships his own code. The project came in polished and on time.',
+    location: 'Add location',
     avatar: '/images/clients/client-2.webp',
   },
   {
     id: 3,
-    name: 'Mark Davis',
+    name: 'Client name',
     description:
-      'Pragadesh’s creativity and technical expertise transformed our website into a visually stunning platform.',
-    location: 'London, UK.',
+      'Our landing page conversions improved noticeably after the redesign. Highly recommend working with him.',
+    location: 'Add location',
     avatar: '/images/clients/client-3.webp',
-  },
-  {
-    id: 4,
-    name: 'Laura Adams',
-    description:
-      'Pragadesh is a artist when it comes to website. He transformed my outdated website into a modern masterpiece.',
-    location: 'Madrid, Spain.',
-    avatar: '/images/clients/client-4.webp',
   },
 ];
 
 export const SERVICES_PLANS = [
   {
     id: 1,
-    service: 'Web Design',
-    price: '$50',
-    description: 'Crafting visually captivating and user-friendly websites for online success.',
-    completedWorks: '25+',
-    experience: '5+',
+    service: 'UI/UX Design',
+    price: '$45',
+    description: 'Designing intuitive, user-friendly interfaces that turn visitors into customers.',
+    completedWorks: '50+',
+    experience: '3+',
     totalHoursWorked: '500 hours',
     icon: ICONS.services.webDesign,
   },
   {
     id: 2,
-    service: 'Web Dev',
-    price: '$60',
-    description: 'Bringing ideas to life with robust and scalable web solutions.',
-    completedWorks: '30+',
-    experience: '6+',
-    totalHoursWorked: '420 hours',
+    service: 'WordPress Dev',
+    price: '$55',
+    description: 'Building fast, scalable WordPress sites with clean, custom front-end code.',
+    completedWorks: '80+',
+    experience: '3+',
+    totalHoursWorked: '600 hours',
     icon: ICONS.services.webdev,
   },
   {
     id: 3,
-    service: 'Graphic Design',
+    service: 'Landing Pages',
     price: '$40',
-    description: 'Creating visually stunning designs that captivate and engage audiences.',
-    completedWorks: '40+',
-    experience: '8+',
-    totalHoursWorked: '328 hours',
+    description: 'Crafting conversion-focused landing pages that look sharp on every device.',
+    completedWorks: '30+',
+    experience: '3+',
+    totalHoursWorked: '320 hours',
     icon: ICONS.services.graphicDesign,
   },
   {
     id: 4,
     service: 'SEO',
-    price: '$70',
-    description: 'Elevating online visibility and driving organic traffic through strategies.',
+    price: '$50',
+    description: 'Improving visibility and page speed to drive organic traffic and better rankings.',
     completedWorks: '20+',
-    experience: '4+',
-    totalHoursWorked: '223 hours',
+    experience: '3+',
+    totalHoursWorked: '220 hours',
     icon: ICONS.services.seo,
   },
 ];
@@ -396,27 +393,27 @@ export const FAQs = [
 
 export const FOLLOWERS_DATA = [
   {
-    platform: 'twitter',
-    followers: '12.6K',
-    url: 'https://twitter.com/',
-    icon: ICONS.socials.x,
+    platform: 'LinkedIn',
+    followers: '2.5K', // CHANGE: your real numbers, or tell me to remove this section
+    url: 'https://www.linkedin.com/in/dhanush-u',
+    icon: ICONS.socials.linkedin,
+  },
+  {
+    platform: 'Github',
+    followers: '300',
+    url: 'https://github.com/Dhanush-U',
+    icon: ICONS.socials.github,
+  },
+  {
+    platform: 'Behance',
+    followers: '1.2K',
+    url: 'https://www.behance.net/dhanushu',
+    icon: ICONS.socials.behance,
   },
   {
     platform: 'Instagram',
-    followers: '8.3K',
+    followers: '3K',
     url: 'https://www.instagram.com/',
-    icon: ICONS.socials.instagram,
-  },
-  {
-    platform: 'LinkedIn',
-    followers: '2.5K',
-    url: 'https://www.linkedin.com/',
-    icon: ICONS.socials.x,
-  },
-  {
-    platform: 'Dribbble',
-    followers: '3.2K',
-    url: 'https://dribbble.com/',
     icon: ICONS.socials.instagram,
   },
 ];
