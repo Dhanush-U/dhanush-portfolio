@@ -6,6 +6,7 @@ import RootLayoutInternel from '@/components/layouts/root-layout';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import Providers from '@/components/providers';
+import Preloader from '@/components/preloader';
 import { siteConfig } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Preloader />
         <Providers>
           <RootLayoutInternel>{children}</RootLayoutInternel>
         </Providers>
