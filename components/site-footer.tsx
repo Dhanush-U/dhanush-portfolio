@@ -9,7 +9,7 @@ export default function SiteFooter() {
       aria-label='Main site footer'
     >
       <div className='relative flex h-min w-full flex-none flex-col flex-nowrap items-center justify-center gap-2.5 overflow-hidden p-0'>
-        <div className='relative flex h-min w-[80%] flex-none flex-col-reverse flex-nowrap items-center justify-center gap-5 overflow-hidden p-0 sm:flex-row sm:items-start sm:gap-0'>
+        <div className='relative flex h-min w-[80%] flex-none flex-col-reverse flex-nowrap items-center justify-center gap-5 overflow-hidden p-0 sm:flex-row sm:items-center sm:justify-between sm:gap-0'>
           <CopyrightText />
           {/* theme toggle */}
           <ThemeSwitcher />
@@ -21,10 +21,10 @@ export default function SiteFooter() {
 
 const CopyrightText = () => {
   return (
-    <div className='relative flex h-auto flex-1 shrink-0 justify-start wrap-break-word whitespace-pre-wrap'>
+    <div className='relative flex h-auto shrink-0 justify-start wrap-break-word whitespace-pre-wrap'>
       <small
         className='text-light-gray-2 text-base font-medium sm:text-lg'
-        aria-label={`Copyright ${new Date().getFullYear()} Parwez. All rights reserved.`}
+        aria-label={`Copyright ${new Date().getFullYear()} ${SITE_CONFIG.profile.name}. All rights reserved.`}
       >
         &copy; {new Date().getFullYear()} {SITE_CONFIG.profile.name}. All rights reserved.
       </small>

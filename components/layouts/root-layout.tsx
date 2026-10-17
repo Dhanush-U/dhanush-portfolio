@@ -8,7 +8,7 @@ import SiteHeader from '../site-header';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='relative flex w-full min-w-0 items-start gap-4 px-3 md:gap-0 lg:px-0'>
+    <div className='relative flex w-full min-w-0 items-start gap-4 px-5 md:gap-0 lg:px-0'>
       <LeftSidebar />
       <MainContent>{children}</MainContent>
       <RightSidebar />
@@ -29,6 +29,7 @@ export const MainContent = ({ children, className, ...props }: ComponentPropsWit
     <div className='flex min-w-0 flex-1 flex-col'>
       <SiteHeader />
       <main
+        id='top'
         className={cn(
           'relative mx-auto flex h-min w-full flex-col flex-wrap items-center justify-center gap-(--gap) overflow-hidden p-[80px_0px] [--gap:100px] sm:px-5 md:px-4 lg:w-[80%] lg:max-w-187.5 lg:flex-1 lg:flex-nowrap lg:px-0',
           className
