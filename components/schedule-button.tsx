@@ -1,8 +1,9 @@
 'use client';
 import { getCalApi } from '@calcom/embed-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ICONS } from './icons';
 import { SITE_CONFIG } from '@/config/site-config';
+import { TextScramble } from '@/components/ui/text-scramble';
 
 interface ScheduleButtonProps {
   label: string;
@@ -10,6 +11,7 @@ interface ScheduleButtonProps {
 
 export default function ScheduleButton({ label }: ScheduleButtonProps) {
   const { calUsername, namespace, defaultLayout } = SITE_CONFIG.booking;
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     (async function () {
@@ -19,6 +21,7 @@ export default function ScheduleButton({ label }: ScheduleButtonProps) {
   }, []);
   return (
     <button
+      onMouseEnter={() => setHovered(true)}
       data-cal-namespace={namespace}
       data-cal-link={`${calUsername}/${namespace}`}
       data-cal-config={`{"layout":"${defaultLayout}"}`}
@@ -32,9 +35,15 @@ export default function ScheduleButton({ label }: ScheduleButtonProps) {
 
         {/* Text */}
         <div className='h-auto w-auto flex-none shrink-0 flex-col justify-start whitespace-pre opacity-70 group-hover:opacity-100'>
-          <p className='text-very-light-gray font-IBM_Plex_Mono text-[15px] leading-[100%] font-medium uppercase'>
+          <TextScramble
+            as='p'
+            trigger={hovered}
+            speed={0.03}
+            onScrambleComplete={() => setHovered(false)}
+            className='text-very-light-gray font-IBM_Plex_Mono text-[15px] leading-[100%] font-medium uppercase'
+          >
             {label}
-          </p>
+          </TextScramble>
         </div>
       </div>
     </button>

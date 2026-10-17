@@ -1,5 +1,7 @@
 'use client';
 import { motion } from 'motion/react';
+import { useState } from 'react';
+import { TextScramble } from '@/components/ui/text-scramble';
 
 import { SITE_CONFIG } from '@/config/site-config';
 import { ICONS } from './icons';
@@ -152,9 +154,11 @@ export function HeroMain() {
 }
 
 const EmailButton = ({ handleClick }: { handleClick: () => void }) => {
+  const [hovered, setHovered] = useState(false);
   return (
     <button
       onClick={handleClick}
+      onMouseEnter={() => setHovered(true)}
       className={
         'bg-almost-black hover:bg-dark-gray-4 border-dark-gray-4 group relative flex w-full cursor-pointer flex-row flex-nowrap items-center justify-center gap-1.5 overflow-visible rounded-[10px] border p-[14px_18px] transition-all duration-300'
       }
@@ -167,9 +171,15 @@ const EmailButton = ({ handleClick }: { handleClick: () => void }) => {
 
         {/* Text */}
         <div className='h-auto w-auto flex-none shrink-0 flex-col justify-start whitespace-pre opacity-70 group-hover:opacity-100'>
-          <p className='text-very-light-gray font-IBM_Plex_Mono text-[15px] leading-[100%] font-semibold whitespace-pre uppercase'>
+          <TextScramble
+            as='p'
+            trigger={hovered}
+            speed={0.03}
+            onScrambleComplete={() => setHovered(false)}
+            className='text-very-light-gray font-IBM_Plex_Mono text-[15px] leading-[100%] font-semibold whitespace-pre uppercase'
+          >
             Email Me
-          </p>
+          </TextScramble>
         </div>
       </div>
     </button>
