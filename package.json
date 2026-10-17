@@ -1,0 +1,76 @@
+{
+  "name": "portfolio",
+  "description": "Pragadesh personal portfolio showcasing projects, skills, and experience",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://dark-portfolio-site.vercel.app",
+  "license": "MIT",
+  "author": {
+    "name": "PS Parwez",
+    "url": "https://github.com/psparwez"
+  },
+  "contributors": [
+    {
+      "name": "PS Parwez",
+      "url": "https://github.com/psparwez"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psparwez/portfolio.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:fix": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "check-types": "tsc --noEmit --pretty",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.31.0",
+    "motion": "^13.1.0",
+    "next": "16.3.1",
+    "next-themes": "^0.4.6",
+    "react": "19.2.8",
+    "react-countup": "^6.5.3",
+    "react-dom": "19.2.8",
+    "react-fast-marquee": "^1.6.5",
+    "tailwind-merge": "^3.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{jsx,js,ts,tsx,json,md,mdx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.28.0"
+}
