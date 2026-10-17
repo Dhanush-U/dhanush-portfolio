@@ -42,7 +42,7 @@ export function HeroMain() {
             viewport={{ once: true }}
             className='flex items-center gap-1'
           >
-            <span>
+            <span className='waveHand'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 1080 1080'
