@@ -196,12 +196,23 @@ html {
 }
 
 .btn-animate {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+.btn-animate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transform: translateX(-101%);
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+.btn-animate:hover::before {
+  transform: translateX(0);
 }
 .btn-animate:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-}
-.btn-animate:active {
-  transform: translateY(-1px);
+  color: #0c0c0d;
 }
