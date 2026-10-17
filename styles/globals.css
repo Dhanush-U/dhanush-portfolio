@@ -216,3 +216,8 @@ html {
 .btn-animate:hover {
   color: #0c0c0d;
 }
+
+/* --- subtle sheen on card boxes (delete this whole block to revert) --- */
+.bg-very-dark-gray {
+    background-image: linear-gradient(120deg, #7b7b7b05 0%, #33333303  100%);
+}

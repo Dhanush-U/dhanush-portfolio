@@ -132,22 +132,22 @@ export default function AboutSection() {
     <div className='space-y-16'>
       {/* About Me */}
       <section className='space-y-7.5'>
-        <div className='pl-6'>
+        <div className='bg-very-dark-gray border-dark-gray-3 rounded-xl border p-6'>
           <SectionHeading
             title='About Me'
             description='A quick introduction to who I am and how I work.'
             icon={<User size={28} />}
           />
-        </div>
-        <div className='bg-very-dark-gray border-dark-gray-3 space-y-4 rounded-xl border p-6'>
-          {ABOUT_PARAGRAPHS.map((paragraph, index) => (
-            <p
-              key={index}
-              className='text-light-gray-2 text-[16px] leading-[170%] font-medium'
-            >
-              {paragraph}
-            </p>
-          ))}
+          <div className='space-y-4 pt-6'>
+            {ABOUT_PARAGRAPHS.map((paragraph, index) => (
+              <p
+                key={index}
+                className='text-light-gray-2 text-[16px] leading-[170%] font-medium'
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
