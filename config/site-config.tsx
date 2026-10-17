@@ -1,5 +1,5 @@
 import { ICONS } from '@/components/icons';
-import { Mail, User, Zap } from 'lucide-react';
+import { Home, Mail, User, Zap } from 'lucide-react';
 
 export const SITE_CONFIG = {
   profile: {
@@ -33,6 +33,11 @@ export const MAIN_MENU = [
   {
     title: 'Home',
     href: '/',
+    icon: <Home />,
+  },
+  {
+    title: 'About',
+    href: '/about',
     icon: <User />,
   },
   {
