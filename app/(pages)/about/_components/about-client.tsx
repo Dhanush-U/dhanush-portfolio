@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
 import { Award, Briefcase, Code2, GraduationCap, User } from 'lucide-react';
 
 import SectionHeading from '@/components/section-heading';
@@ -71,6 +71,62 @@ const CERTIFICATIONS = [
   },
 ];
 
+function SkillBar({ name, value }: { name: string; value: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [count, setCount] = useState(0);
+
+  // Reveal when the bar scrolls into view (once)
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Count the number up in sync with the bar fill
+  useEffect(() => {
+    if (!visible) return;
+    let raf = 0;
+    let start: number | null = null;
+    const duration = 1000;
+    const step = (timestamp: number) => {
+      if (start === null) start = timestamp;
+      const progress = Math.min((timestamp - start) / duration, 1);
+      setCount(Math.round(progress * value));
+      if (progress < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [visible, value]);
+
+  return (
+    <div ref={ref}>
+      <div className='mb-2 flex items-center justify-between'>
+        <p className='text-light-gray-4 text-[15px] font-semibold'>{name}</p>
+        <p className='text-light-gray-2 text-[15px] font-medium'>{count}%</p>
+      </div>
+      <div className='bg-dark-gray-3 h-2 w-full overflow-hidden rounded-full'>
+        <div
+          className='h-full rounded-full bg-white/80'
+          style={{ width: visible ? `${value}%` : '0%', transition: 'width 1s ease-out' }}
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function AboutSection() {
   return (
     <div className='space-y-16'>
@@ -101,17 +157,14 @@ export default function AboutSection() {
           icon={<Briefcase size={28} />}
         />
         <div className='flex w-full flex-col gap-2.5'>
-          {EXPERIENCE.map((exp, index) => (
-            <motion.div
+          {EXPERIENCE.map((exp) => (
+            <div
               key={exp.company}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className='bg-very-dark-gray border-dark-gray-3 flex w-full flex-col gap-5 rounded-xl border p-4 sm:p-6'
             >
               <div className='flex w-full items-center justify-between'>
                 <div className='flex flex-1 items-center gap-2'>
-                  <div className='bg-dark-gray-4 border-border-color flex items-center justify-center rounded-lg border p-2.5'>
+                  <div className='bg-dark-gray-4 border-border-color flex flex-none items-center justify-center rounded-lg border p-2.5'>
                     <Briefcase
                       size={26}
                       className='text-light-gray-3'
@@ -136,7 +189,9 @@ export default function AboutSection() {
                     </div>
                   </div>
                 </div>
-                <h3 className='text-light-gray-2 hidden text-lg font-bold sm:block'>{exp.year}</h3>
+                <h3 className='text-light-gray-2 hidden flex-none text-lg font-bold sm:block'>
+                  {exp.year}
+                </h3>
               </div>
               <div className='border-dark-gray-3 bg-darkest-gray flex w-full flex-col gap-1 rounded-xl border p-4'>
                 <p className='text-light-gray-4 text-base font-bold'>{exp.title}</p>
@@ -144,7 +199,7 @@ export default function AboutSection() {
                   {exp.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -157,12 +212,9 @@ export default function AboutSection() {
           icon={<GraduationCap size={28} />}
         />
         <div className='flex w-full flex-col gap-2.5'>
-          {EDUCATION.map((edu, index) => (
-            <motion.div
+          {EDUCATION.map((edu) => (
+            <div
               key={edu.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className='bg-very-dark-gray border-dark-gray-3 flex w-full flex-col gap-5 rounded-xl border p-4 sm:p-6'
             >
               <div className='flex w-full items-center justify-between gap-3'>
@@ -185,7 +237,7 @@ export default function AboutSection() {
                 <p className='text-light-gray-4 text-base font-bold'>{edu.title}</p>
                 <p className='text-light-gray-2 text-[15px] font-medium'>{edu.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -197,27 +249,13 @@ export default function AboutSection() {
           description='Tools and areas I work in day to day.'
           icon={<Code2 size={28} />}
         />
-        <div className='grid grid-cols-1 gap-x-10 gap-y-6 lg:grid-cols-2'>
-          {SKILLS.map((skill, index) => (
-            <motion.div
+        <div className='relative grid h-min w-full grid-cols-1 gap-5 lg:grid-cols-[repeat(2,minmax(50px,1fr))]'>
+          {SKILLS.map((skill) => (
+            <SkillBar
               key={skill.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-            >
-              <div className='mb-2 flex items-center justify-between'>
-                <p className='text-light-gray-4 text-[15px] font-semibold'>{skill.name}</p>
-                <p className='text-light-gray-2 text-[15px] font-medium'>{skill.value}%</p>
-              </div>
-              <div className='bg-dark-gray-3 h-2 w-full overflow-hidden rounded-full'>
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${skill.value}%` }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  className='h-full rounded-full bg-white/80'
-                />
-              </div>
-            </motion.div>
+              name={skill.name}
+              value={skill.value}
+            />
           ))}
         </div>
       </section>
@@ -229,13 +267,10 @@ export default function AboutSection() {
           description='Courses and credentials I have earned.'
           icon={<Award size={28} />}
         />
-        <div className='grid grid-cols-1 gap-2.5 lg:grid-cols-2'>
-          {CERTIFICATIONS.map((cert, index) => (
-            <motion.div
+        <div className='relative grid h-min w-full grid-cols-1 gap-2.5 lg:grid-cols-[repeat(2,minmax(50px,1fr))]'>
+          {CERTIFICATIONS.map((cert) => (
+            <div
               key={cert.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className='bg-very-dark-gray border-dark-gray-3 flex items-center gap-3 rounded-xl border p-6'
             >
               <div className='bg-dark-gray-4 border-border-color flex flex-none items-center justify-center rounded-lg border p-2.5'>
@@ -248,7 +283,7 @@ export default function AboutSection() {
                 <p className='text-light-gray-4 text-base font-bold'>{cert.title}</p>
                 <p className='text-light-gray-2 text-[15px] font-medium'>{cert.issuer}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
