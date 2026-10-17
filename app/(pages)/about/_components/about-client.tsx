@@ -114,8 +114,8 @@ function SkillBar({ name, value }: { name: string; value: number }) {
   return (
     <div ref={ref}>
       <div className='mb-2 flex items-center justify-between'>
-        <p className='text-light-gray-4 text-[15px] font-semibold'>{name}</p>
-        <p className='text-light-gray-2 text-[15px] font-medium'>{count}%</p>
+        <p className='text-light-gray-4 text-[16px] font-semibold'>{name}</p>
+        <p className='text-light-gray-2 text-[16px] font-medium'>{count}%</p>
       </div>
       <div className='bg-dark-gray-3 h-2 w-full overflow-hidden rounded-full'>
         <div
@@ -132,16 +132,18 @@ export default function AboutSection() {
     <div className='space-y-16'>
       {/* About Me */}
       <section className='space-y-7.5'>
-        <SectionHeading
-          title='About Me'
-          description='A quick introduction to who I am and how I work.'
-          icon={<User size={28} />}
-        />
+        <div className='pl-6'>
+          <SectionHeading
+            title='About Me'
+            description='A quick introduction to who I am and how I work.'
+            icon={<User size={28} />}
+          />
+        </div>
         <div className='bg-very-dark-gray border-dark-gray-3 space-y-4 rounded-xl border p-6'>
           {ABOUT_PARAGRAPHS.map((paragraph, index) => (
             <p
               key={index}
-              className='text-light-gray-2 text-[15px] leading-[170%] font-medium'
+              className='text-light-gray-2 text-[16px] leading-[170%] font-medium'
             >
               {paragraph}
             </p>
@@ -177,7 +179,7 @@ export default function AboutSection() {
                         href={exp.link}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-light-gray-2 text-[15px] font-medium'
+                        className='text-light-gray-2 text-[16px] font-medium'
                       >
                         {exp.link.replace('https://', '')}
                       </a>
@@ -195,7 +197,7 @@ export default function AboutSection() {
               </div>
               <div className='border-dark-gray-3 bg-darkest-gray flex w-full flex-col gap-1 rounded-xl border p-4'>
                 <p className='text-light-gray-4 text-base font-bold'>{exp.title}</p>
-                <p className='text-light-gray-2 text-[15px] leading-[160%] font-medium'>
+                <p className='text-light-gray-2 text-[16px] leading-[160%] font-medium'>
                   {exp.description}
                 </p>
               </div>
@@ -235,7 +237,7 @@ export default function AboutSection() {
               </div>
               <div className='border-dark-gray-3 bg-darkest-gray flex w-full flex-col gap-1 rounded-xl border p-4'>
                 <p className='text-light-gray-4 text-base font-bold'>{edu.title}</p>
-                <p className='text-light-gray-2 text-[15px] font-medium'>{edu.description}</p>
+                <p className='text-light-gray-2 text-[16px] font-medium'>{edu.description}</p>
               </div>
             </div>
           ))}
@@ -281,7 +283,7 @@ export default function AboutSection() {
               </div>
               <div className='flex flex-col'>
                 <p className='text-light-gray-4 text-base font-bold'>{cert.title}</p>
-                <p className='text-light-gray-2 text-[15px] font-medium'>{cert.issuer}</p>
+                <p className='text-light-gray-2 text-[16px] font-medium'>{cert.issuer}</p>
               </div>
             </div>
           ))}
