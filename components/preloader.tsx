@@ -100,7 +100,7 @@ function LoaderVisual() {
             initial={{ opacity: 0, scale: 0.6, rotate: 30 }}
             animate={{ opacity: 1, scale: 1, rotate: 10 }}
             transition={pop}
-            className='border-border-color bg-dark-gray-4 text-light-gray-4 absolute bottom-[9%] left-[10%] hidden w-[160px] rounded-md border p-4 font-mono text-lg leading-tight font-bold uppercase sm:block'
+            className='border-border-color bg-dark-gray-4 text-light-gray-4 absolute bottom-[9%] left-[10%] w-[160px] rounded-md border p-4 font-mono text-lg leading-tight font-bold uppercase'
           >
             <p>
               Dhanush U
@@ -125,7 +125,7 @@ function LoaderVisual() {
             initial={{ opacity: 0, scale: 0.6, rotate: -35 }}
             animate={{ opacity: 1, scale: 1, rotate: -12 }}
             transition={pop}
-            className='border-border-color bg-dark-gray-4 text-light-gray-4 absolute top-[10%] right-[10%] hidden w-[170px] rounded-md border p-4 font-mono text-lg leading-tight font-bold uppercase sm:block'
+            className='border-border-color bg-dark-gray-4 text-light-gray-4 absolute top-[10%] right-[10%] w-[170px] rounded-md border p-4 font-mono text-lg leading-tight font-bold uppercase'
           >
             <p>
               With{' '}
