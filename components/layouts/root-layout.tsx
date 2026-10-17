@@ -31,7 +31,7 @@ export const MainContent = ({ children, className, ...props }: ComponentPropsWit
       <main
         id='top'
         className={cn(
-          'relative mx-auto flex h-min w-full flex-col flex-wrap items-center justify-center gap-(--gap) overflow-hidden p-[80px_0px] [--gap:100px] sm:px-5 md:px-4 lg:w-[80%] lg:max-w-187.5 lg:flex-1 lg:flex-nowrap lg:px-0',
+          'relative mx-auto flex h-min w-full flex-col flex-wrap items-center justify-center gap-(--gap) overflow-hidden px-0 pt-38 pb-20 sm:pt-20 [--gap:100px] sm:px-5 md:px-4 lg:w-[80%] lg:max-w-187.5 lg:flex-1 lg:flex-nowrap lg:px-0',
           className
         )}
         {...props}
