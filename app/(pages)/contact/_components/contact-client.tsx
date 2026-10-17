@@ -2,6 +2,9 @@
 
 import { Calendar1, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useEffect } from 'react';
+import { getCalApi } from '@calcom/embed-react';
+import { SITE_CONFIG } from '@/config/site-config';
 
 import SectionHeading from '@/components/section-heading';
 import { ICONS } from '@/components/icons';
@@ -9,6 +12,22 @@ import ContactForm from './contact-form';
 import Button from '@/components/ui/button';
 
 export default function ContactSection() {
+  const { calUsername, namespace, defaultLayout } = SITE_CONFIG.booking;
+
+  const handleEmail = () => {
+    const email = 'dhanush18u@gmail.com';
+    const subject = 'Project inquiry';
+    const body = 'Hi Dhanush, I came across your portfolio and would like to talk about a project.';
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace });
+      cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
+    })();
+  }, [namespace]);
+
   return (
     <div className='space-y-10'>
       <SectionHeading
@@ -37,6 +56,7 @@ export default function ContactSection() {
               className='w-full sm:w-min'
               icon={<Mail size={18} />}
               title='Email Me'
+              onClick={handleEmail}
             />
           </motion.div>
 
@@ -55,6 +75,9 @@ export default function ContactSection() {
               className='w-full sm:w-min'
               icon={<Calendar1 size={18} />}
               title='Schedule Call'
+              data-cal-namespace={namespace}
+              data-cal-link={`${calUsername}/${namespace}`}
+              data-cal-config={`{"layout":"${defaultLayout}"}`}
             />
           </motion.div>
         </div>

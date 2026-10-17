@@ -8,6 +8,9 @@ interface ButtonProps {
   position?: 'left' | 'right';
   href?: string;
   className?: string;
+  'data-cal-namespace'?: string;
+  'data-cal-link'?: string;
+  'data-cal-config'?: string;
 }
 
 export default function Button({
@@ -16,10 +19,16 @@ export default function Button({
   position = 'left',
   className = '',
   onClick,
+  'data-cal-namespace': calNamespace,
+  'data-cal-link': calLink,
+  'data-cal-config': calConfig,
 }: ButtonProps) {
   return (
     <button
       onClick={onClick}
+      data-cal-namespace={calNamespace}
+      data-cal-link={calLink}
+      data-cal-config={calConfig}
       className={clsx(
         'bg-dark-gray-2 border-dark-gray-3 dark:bg-almost-black hover:bg-dark-gray-4 dar:border-dark-gray-4 group relative flex cursor-pointer flex-nowrap items-center justify-center gap-1.5 overflow-visible rounded-[10px] border p-[14px_18px] transition-all duration-300',
         position === 'left' ? 'flex-row' : 'flex-row-reverse',
