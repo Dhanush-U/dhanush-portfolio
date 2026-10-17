@@ -7,7 +7,6 @@ import { SITE_CONFIG } from '@/config/site-config';
 import { ICONS } from './icons';
 import ResumeButton from './resume-button';
 import AnimatedImageGrid from './animated-image-grid';
-import LogosCarousel from './logos-carousel';
 import CounterContainer from './counter-container';
 
 export function HeroMain() {
@@ -204,7 +203,6 @@ export function HeroContainer() {
         }}
         viewport={{ once: true }}
       >
-        <LogosCarousel />
         {/* bottom  */}
         <CounterContainer />
       </motion.div>
