@@ -257,7 +257,7 @@ export const SHOW_CASE_PROJECTS = [
     title: 'GSAP Animation Suite',
     description:
       'Built 10+ interactive scroll and motion animations that increased user engagement by 30%.',
-    link: '',
+    link: 'cubicdesignz.com',
     type: 'Interactive',
     theme: 'Dark',
     pages: 3,
@@ -268,7 +268,7 @@ export const SHOW_CASE_PROJECTS = [
     title: 'Client Website Collection',
     description:
       'A set of responsive WordPress and Shopify sites delivered across industries, focused on UX and speed.',
-    link: '',
+    link: 'fyerx.com',
     type: 'Web Design',
     theme: 'Light',
     pages: 30,
