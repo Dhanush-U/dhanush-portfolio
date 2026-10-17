@@ -18,27 +18,46 @@ export default function Form() {
     message: '',
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     setIsSubmitting(true);
     setLoader(true);
 
-    // TODO: API CALL
-
-    setTimeout(() => {
-      setData({
-        name: '',
-        email: '',
-        message: '',
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'b6c008ae-8772-4283-97a1-601fd7dc949c',
+          subject: 'New message from your portfolio',
+          from_name: 'Portfolio Contact Form',
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setData({ name: '', email: '', message: '' });
+        setErrorOnSubmit(false);
+      } else {
+        setErrorOnSubmit(true);
+      }
+    } catch {
+      setErrorOnSubmit(true);
+    } finally {
       setLoader(false);
-      setErrorOnSubmit(false);
 
       setTimeout(() => {
         setIsSubmitting(false);
       }, 7000);
-    }, 4000);
+    }
   };
 
   return (
