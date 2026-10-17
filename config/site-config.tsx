@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   },
   // Storing Cal.com booking preferences safely in one place
   booking: {
-    calUsername: 'dhanush', // CHANGE: your Cal.com username (needs a free cal.com account), or we can switch this button to email
+    calUsername: 'dhanush-slkkfi', // CHANGE: your Cal.com username (needs a free cal.com account), or we can switch this button to email
     namespace: '15min',
     defaultLayout: 'month_view', // "month_view" | "week_view" | "column_view"
   },

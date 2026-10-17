@@ -5,18 +5,18 @@ import { TextScramble } from '@/components/ui/text-scramble';
 
 import { SITE_CONFIG } from '@/config/site-config';
 import { ICONS } from './icons';
-import ScheduleButton from './schedule-button';
+import ResumeButton from './resume-button';
 import AnimatedImageGrid from './animated-image-grid';
 import LogosCarousel from './logos-carousel';
 import CounterContainer from './counter-container';
 
 export function HeroMain() {
   const handleClick = () => {
-    const email = process.env.NEXT_PUBLIC_TO_EMAIL;
-    const subject = 'Schedule a Call';
-    const body = "Hi, I'd like to schedule a call.";
+    const email = 'dhanush18u@gmail.com';
+    const subject = 'Project inquiry';
+    const body = 'Hi Dhanush, I came across your portfolio and would like to talk about a project.';
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, '_blank');
+    window.location.href = mailtoLink;
   };
 
   return (
@@ -146,7 +146,7 @@ export function HeroMain() {
         >
           <EmailButton handleClick={handleClick} />
 
-          <ScheduleButton label='Schedule call' />
+          <ResumeButton label='Open CV' />
         </motion.div>
       </div>
     </section>
