@@ -399,26 +399,26 @@ export const FAQs = [
 export const FOLLOWERS_DATA = [
   {
     platform: 'LinkedIn',
-    followers: '2.5K', // CHANGE: your real numbers, or tell me to remove this section
+    followers: "Let's connect",
     url: 'https://www.linkedin.com/in/dhanush-u',
     icon: ICONS.socials.linkedin,
   },
   {
-    platform: 'Github',
-    followers: '300',
+    platform: 'GitHub',
+    followers: 'See my code',
     url: 'https://github.com/Dhanush-U',
     icon: ICONS.socials.github,
   },
   {
     platform: 'Behance',
-    followers: '1.2K',
+    followers: 'View my work',
     url: 'https://www.behance.net/dhanushu',
     icon: ICONS.socials.behance,
   },
   {
     platform: 'Instagram',
-    followers: '3K',
-    url: 'https://www.instagram.com/',
+    followers: 'Follow along',
+    url: 'https://www.instagram.com/dhanush.18._',
     icon: ICONS.socials.instagram,
   },
 ];

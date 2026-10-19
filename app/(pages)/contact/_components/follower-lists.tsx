@@ -24,6 +24,8 @@ export default function FollowerLists() {
             >
               <Link
                 href={data.url}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='bg-very-dark-gray border-dark-gray-3 hover:bg-almost-black group flex items-center gap-4 rounded-xl border p-4 transition-all'
               >
                 {/* Icon */}
@@ -34,12 +36,10 @@ export default function FollowerLists() {
                     className='object-contain'
                   />
                 </div>
-                {/* Follower Info */}
+                {/* Platform + call-to-action */}
                 <div className='flex flex-col'>
-                  <p className='text-light-gray-4 text-lg font-semibold'>{data.followers}</p>
-                  <p className='text-light-gray-2 text-sm font-medium capitalize'>
-                    {data.platform}
-                  </p>
+                  <p className='text-light-gray-4 text-lg font-semibold'>{data.platform}</p>
+                  <p className='text-light-gray-2 text-sm font-medium'>{data.followers}</p>
                 </div>
                 {/* Right Arrow */}
                 <div className='ml-auto h-6 w-6 opacity-50 transition-all group-hover:opacity-100'>
