@@ -1,23 +1,17 @@
 {
   "name": "portfolio",
-  "description": "Pragadesh personal portfolio showcasing projects, skills, and experience",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dark-portfolio-site.vercel.app",
+  "description": "Dhanush U — UI/UX and WordPress designer portfolio.",
+  "homepage": "https://itzdhanushu.vercel.app",
   "license": "MIT",
   "author": {
-    "name": "PS Parwez",
-    "url": "https://github.com/psparwez"
+    "name": "Dhanush U",
+    "url": "https://github.com/Dhanush-U"
   },
-  "contributors": [
-    {
-      "name": "PS Parwez",
-      "url": "https://github.com/psparwez"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/psparwez/portfolio.git"
+    "url": "git+https://github.com/Dhanush-U/dhanush-portfolio.git"
   },
   "scripts": {
     "dev": "next dev",

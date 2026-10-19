@@ -4,6 +4,12 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Heart } from 'lucide-react';
 
+declare global {
+  interface Window {
+    __preloaderActive?: boolean;
+  }
+}
+
 const BLOCKS = 10;
 const STEP_MS = 260; // time per block (~2.6s total)
 const ease = [0.785, 0.135, 0.15, 0.86] as const;
@@ -146,8 +152,22 @@ function LoaderVisual() {
 export default function Preloader() {
   const [show, setShow] = useState(true);
 
+  // Flag that the preloader is on screen, so the hero image reveal can wait for it
+  // to finish instead of animating hidden behind it.
+  if (typeof window !== 'undefined' && window.__preloaderActive === undefined) {
+    window.__preloaderActive = true;
+  }
+
   useEffect(() => {
-    const t = setTimeout(() => setShow(false), 3000);
+    const t = setTimeout(() => {
+      setShow(false);
+      // Kick off the hero image reveal the moment the preloader starts sliding
+      // away, so the cubes are already fading as that area is uncovered.
+      if (typeof window !== 'undefined') {
+        window.__preloaderActive = false;
+        window.dispatchEvent(new Event('preloaderDone'));
+      }
+    }, 3000);
     return () => clearTimeout(t);
   }, []);
 

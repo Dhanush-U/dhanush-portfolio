@@ -1,18 +1,19 @@
 import { SITE_CONFIG } from '@/config/site-config';
 
 const siteConfig = {
-  name: SITE_CONFIG.profile.name,
+  name: SITE_CONFIG.profile.displayName,
   url: SITE_CONFIG.SITE_INFO.url,
   description: SITE_CONFIG.profile.description,
-  email: 'hello@yourdomain.com',
+  email: 'dhanush18u@gmail.com',
   jobTitle: SITE_CONFIG.profile.jobTitle,
   location: {
-    city: 'Delhi',
+    city: 'Chennai',
     country: 'India',
   },
   sameAs: [
-    `https://github.com/${SITE_CONFIG.profile.name}`,
-    `https://www.linkedin.com/in/${SITE_CONFIG.profile.name}`,
+    'https://github.com/Dhanush-U',
+    'https://www.linkedin.com/in/dhanush-u',
+    'https://www.behance.net/dhanushu',
   ],
 };
 

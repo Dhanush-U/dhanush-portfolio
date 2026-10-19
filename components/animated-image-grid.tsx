@@ -15,7 +15,18 @@ const AnimatedImageGrid: React.FC<AnimatedImageGridProps> = ({ image }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    const reveal = () => setIsLoaded(true);
+
+    // On first load the full-screen preloader covers the page, so wait until it
+    // finishes sliding away before revealing the image. On client-side navigation
+    // (no preloader running) just reveal shortly after mount.
+    if (typeof window !== 'undefined' && window.__preloaderActive) {
+      window.addEventListener('preloaderDone', reveal, { once: true });
+      return () => window.removeEventListener('preloaderDone', reveal);
+    }
+
+    const t = setTimeout(reveal, 250);
+    return () => clearTimeout(t);
   }, []);
 
   return (
@@ -35,12 +46,12 @@ const AnimatedImageGrid: React.FC<AnimatedImageGridProps> = ({ image }) => {
         {Array.from({ length: 100 }).map((_, index) => (
           <motion.div
             key={index}
-            className='bg-image-bg rounded-xl'
+            className='bg-image-bg'
             initial={{ opacity: 1 }}
             animate={{ opacity: isLoaded ? 0 : 1 }}
             transition={{
-              duration: 0.5,
-              delay: (index % 10) * 0.05,
+              duration: 0.6,
+              delay: (index % 10) * 0.12,
               ease: 'easeInOut',
             }}
           />

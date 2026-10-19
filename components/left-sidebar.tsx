@@ -104,6 +104,16 @@ const NavigationListsItem = () => {
 };
 
 const BackToTop = () => {
+  const handleScrollToTop = () => {
+    // On mobile this button lives inside the slide-out menu, which locks page
+    // scrolling while open. A click here also closes that menu (it bubbles to the
+    // overlay), so we wait a beat for the scroll-lock to lift, then scroll.
+    setTimeout(() => {
+      document.body.classList.remove('overflow-hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 120);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -116,15 +126,16 @@ const BackToTop = () => {
       }}
       className='group relative flex w-full max-w-max items-center justify-end'
     >
-      <Link
-        href='#top'
+      <button
+        type='button'
+        onClick={handleScrollToTop}
         aria-label='Go to top'
-        className={`hover:bg-very-dark-gray hover:border-dark-gray-3} relative flex h-min w-min cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-transparent p-3.5`}
+        className='hover:bg-very-dark-gray hover:border-dark-gray-3 relative flex h-min w-min cursor-pointer items-center justify-center overflow-hidden rounded-xl border border-transparent p-3.5'
       >
         <span className='text-light-gray-2'>
           <ArrowUp size={24} />
         </span>
-      </Link>
+      </button>
       <Tooltip
         content='Go to Top'
         position='top'

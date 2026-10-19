@@ -22,7 +22,7 @@ export const SITE_CONFIG = {
     title: 'Dhanush U • UI/UX & WordPress Designer',
     description:
       'The portfolio of Dhanush U — UI/UX and WordPress designer specializing in conversion-focused, accessible, and visually polished web experiences.',
-    url: process.env.SITE_URL || 'https://dhanush-portfolio.vercel.app',
+    url: process.env.SITE_URL || 'https://itzdhanushu.vercel.app',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
