@@ -134,7 +134,7 @@ export const EXPERIENCE_LISTS = [
     company: 'Brainstorm Force',
     label: 'WordPress Product Company',
     description:
-      'Design across flagship WordPress products including Astra, Spectra and ZipWP. Led the Spectra website redesign and shipped a Gutenberg block end to end, from Figma to production.',
+       "I design across Brainstorm Force's flagship WordPress products — Astra, Spectra, SureCart, and ZipWP — shaping interfaces and a large, consistent design system. I led the redesigns of both the Spectra and SureCart websites, preserving their SEO rankings while making them more conversion-focused, and handled the UI/UX for the SureCart plugin, including its onboarding experience, from Figma to production.",
     link: 'brainstormforce.com',
     logo: ICONS.experienceCompaniesLogos.Vortex,
   },
@@ -145,8 +145,8 @@ export const EXPERIENCE_LISTS = [
     company: 'Cubic Designz',
     label: 'Design Studio',
     description:
-      'Built 10+ interactive GSAP animations, delivered custom UI in Figma and front-end code, and mentored a team of five to improve delivery efficiency.',
-    link: 'cubicdesignz.com',
+      'At Cubic Designz I designed and built interactive, motion-rich interfaces, including smooth GSAP animations that lifted user engagement by around 30%. Beyond the design work, I improved SEO and page speed, and mentored a small team of five to help everyone ship cleaner work, faster.',
+    link: 'cubicdesignz.com', 
     logo: ICONS.experienceCompaniesLogos.PixelWorks,
   },
   {
@@ -156,7 +156,7 @@ export const EXPERIENCE_LISTS = [
     company: 'FyerX',
     label: 'Digital Marketing Agency',
     description:
-      'Designed and launched 50+ responsive websites on WordPress and Shopify, lifting organic traffic by 40% and cutting page load times by 30%.',
+      'This was my first full-time role, where I designed and launched 50+ responsive websites for clients across a range of industries using WordPress and Shopify. I focused on clean, user-friendly design and strong performance — growing organic traffic by 40% and cutting page load times by nearly a third.',
     link: 'fyerx.com',
     logo: ICONS.experienceCompaniesLogos.Athon,
   },

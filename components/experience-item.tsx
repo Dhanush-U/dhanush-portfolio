@@ -45,13 +45,13 @@ export default function ExperienceItem() {
                       </div>
                       <div className='relative flex h-auto w-auto flex-none shrink-0 flex-col justify-start whitespace-pre'>
                         <a
-                          href={exp.link}
+                          href={exp.link.startsWith('http') ? exp.link : `https://${exp.link}`}
                           className='text-light-gray-2 cursor-pointer text-[15px] font-medium'
                           aria-label={`Visit ${exp.company} website`}
                           target='_blank'
                           rel='noopener noreferrer'
                         >
-                          {exp.link}
+                          {exp.link.replace(/^https?:\/\//, '')}
                         </a>
                       </div>
                     </div>
