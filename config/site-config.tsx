@@ -1,3 +1,4 @@
+import { StackIcons } from '@/components/stack-icons';
 import { ICONS } from '@/components/icons';
 import { Home, Mail, User, Zap } from 'lucide-react';
 
@@ -108,21 +109,25 @@ export const COUNTER_LISTS = [
     id: 1,
     title: 'Happy Clients',
     value: 30,
+    symbol: '+',
   },
   {
     id: 2,
     title: 'Years of Experience',
     value: 3,
+    symbol: '+',
   },
   {
     id: 3,
     title: 'Websites Launched',
-    value: 80,
+    value: 150,
+    symbol: '+',
   },
   {
     id: 4,
-    title: 'UI Patterns Built',
-    value: 400,
+    title: 'Client Satisfaction',
+    value: 100,
+    symbol: '%',
   },
 ];
 
@@ -166,44 +171,44 @@ export const STACK_LISTS = [
   {
     id: 1,
     title: 'Figma',
-    description: 'Interface Design Tool',
+    description: 'Interface Design',
     logo: ICONS.stackLists.figma,
     link: 'https://www.figma.com',
   },
   {
     id: 2,
-    title: 'Notion',
-    description: 'Productivity Tool',
-    logo: ICONS.stackLists.notion,
-    link: 'https://www.notion.so',
+    title: 'WordPress',
+    description: 'CMS & Development',
+    logo: StackIcons.wordpress,
+    link: 'https://wordpress.org',
   },
   {
     id: 3,
-    title: 'Webflow',
-    description: 'No Code Design Tool',
-    logo: ICONS.stackLists.webflow,
-    link: 'https://www.webflow.com',
+    title: 'HTML & CSS',
+    description: 'Front-end',
+    logo: StackIcons.html,
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
   },
   {
     id: 4,
-    title: 'Framer',
-    description: 'No Code Design Tool',
-    logo: ICONS.stackLists.framer,
-    link: 'https://www.framer.com',
+    title: 'JavaScript',
+    description: 'Interactivity',
+    logo: StackIcons.javascript,
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
     id: 5,
-    title: 'Slack',
-    description: 'Productivity Tool',
-    logo: ICONS.stackLists.slack,
-    link: 'https://slack.com',
+    title: 'GSAP',
+    description: 'Web Animation',
+    logo: StackIcons.gsap,
+    link: 'https://gsap.com',
   },
   {
     id: 6,
-    title: 'Asana',
-    description: 'Productivity Tool',
-    logo: ICONS.stackLists.asana,
-    link: 'https://www.asana.com',
+    title: 'Git & GitHub',
+    description: 'Version Control',
+    logo: ICONS.socials.github,
+    link: 'https://github.com',
   },
 ];
 

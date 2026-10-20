@@ -36,7 +36,11 @@ const CounterListsItem = () => {
                 <CountUp end={list.value} />
               </div>
             </div>
-            <h1 className='text-[34px] font-bold text-white'>+</h1>
+            <h1
+              className={`${list.symbol === '%' ? 'text-[24px]' : 'text-[34px]'} font-bold text-white`}
+            >
+              {list.symbol}
+            </h1>
           </div>
           <div className='relative flex w-full flex-none shrink-0 flex-col justify-start wrap-break-word whitespace-pre-wrap'>
             <p className='text-light-gray-2 text-center text-[15px] font-medium'>{list.title}</p>
