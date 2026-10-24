@@ -7,6 +7,7 @@ import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import Providers from '@/components/providers';
 import Preloader from '@/components/preloader';
+import ScrollToTop from '@/components/scroll-to-top';
 import { siteConfig } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -68,6 +69,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ScrollToTop />
         <Preloader />
         <Providers>
           <RootLayoutInternel>{children}</RootLayoutInternel>
