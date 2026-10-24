@@ -37,7 +37,9 @@ const CounterListsItem = () => {
               </div>
             </div>
             <h1
-              className={`${list.symbol === '%' ? 'text-[24px]' : 'text-[34px]'} font-bold text-white`}
+              className={`flex h-[34px] w-6 items-center justify-center font-bold text-white ${
+                list.symbol === '%' ? 'text-[24px]' : 'text-[34px]'
+              }`}
             >
               {list.symbol}
             </h1>
