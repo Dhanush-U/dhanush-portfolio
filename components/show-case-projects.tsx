@@ -2,7 +2,6 @@
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 import { SHOW_CASE_PROJECTS } from '@/config/site-config';
 import SectionHeading from './section-heading';
@@ -22,8 +21,8 @@ export default function ShowCaseProjects({
     >
       <div className='relative h-auto w-full flex-none'>
         <SectionHeading
-          title='Creative Design Showcase'
-          description='Explore a collection of my most innovative and visually stunning design works.'
+          title='Selected Work'
+          description='A few projects I have designed and shipped — tap any to read the full case study.'
           icon={
             <ICONS.fly
               width={30}
@@ -39,18 +38,20 @@ export default function ShowCaseProjects({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{
-              once: true,
-            }}
+            viewport={{ once: true }}
             className='relative h-auto w-full flex-none'
             key={item.id}
           >
-            <div className='bg-very-dark-gray border-dark-gray-3 relative flex h-min w-full flex-col flex-nowrap items-center justify-start gap-5 overflow-visible rounded-xl border p-4 lg:flex-row lg:p-[8px_24px_8px_8px]'>
-              <div className='ring-border-color/30 relative h-full min-h-45 w-full rounded-xl ring-1 lg:flex-1'>
+            <Link
+              href={`/work/${item.slug}`}
+              aria-label={`Read the ${item.title} case study`}
+              className='group bg-very-dark-gray border-dark-gray-3 hover:border-dark-gray-4 relative flex h-min w-full flex-col flex-nowrap items-center justify-start gap-5 overflow-visible rounded-xl border p-4 transition-all lg:flex-row lg:p-[8px_24px_8px_8px]'
+            >
+              <div className='ring-border-color/30 relative h-full min-h-45 w-full overflow-hidden rounded-xl ring-1 lg:flex-1'>
                 <figure className='relative inset-0 h-full w-full rounded-xl lg:absolute'>
                   <Image
                     src={item.image}
-                    className='block h-full w-full rounded-[inherit] object-cover object-center'
+                    className='block h-full w-full rounded-[inherit] object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]'
                     height={180}
                     width={180}
                     alt={item.title}
@@ -60,77 +61,36 @@ export default function ShowCaseProjects({
 
               <div className='relative flex h-min w-full flex-1 flex-col flex-nowrap items-start justify-start gap-5 overflow-visible p-0'>
                 <div className='relative flex h-min w-full flex-1 flex-col flex-nowrap items-start justify-start gap-4 overflow-visible p-0'>
-                  <div className='relative flex h-min w-full flex-none flex-nowrap items-center justify-between gap-5 overflow-visible p-0'>
-                    <div className='relative h-auto flex-1 shrink-0 flex-col justify-start wrap-break-word whitespace-pre-wrap'>
-                      <h3 className='text-[22px] leading-[1.2em] font-bold text-white'>
-                        {item.title}
-                      </h3>
-                    </div>
-
-                    <div className='relative h-auto flex-none'>
-                      <Link
-                        href={'https://' + item.link}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        aria-label={`Visit project website for ${item.title}`}
-                        className='bg-almost-black border-dark-gray-4 custom-padding group hover:bg-dark-gray-4 relative flex h-min w-min cursor-pointer flex-nowrap items-center justify-center gap-1.5 overflow-visible rounded-lg border transition-all duration-500'
-                      >
-                        <span className='relative size-5 overflow-visible opacity-70 transition-opacity duration-500 group-hover:opacity-100'>
-                          <svg
-                            className='block size-5'
-                            viewBox='0 0 24 24'
-                            fill='none'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <path
-                              className='stroke-light-gray-3'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              strokeWidth='2'
-                              d='M10 8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4h3m4-8h3a4 4 0 0 1 4 4v0a4 4 0 0 1-4 4h-3m-5-4h6'
-                            />
-                          </svg>
-                        </span>
-                        <div className='relative flex h-auto w-auto flex-none shrink-0 flex-col whitespace-pre opacity-70 transition-all duration-500 group-hover:opacity-100'>
-                          <p className='text-light-gray-3 text-[15px] leading-[100%] font-medium'>
-                            {item.link}
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
+                  <div className='flex w-full items-center justify-between gap-5'>
+                    <h3 className='text-[22px] leading-[1.2em] font-bold text-white'>{item.title}</h3>
+                    <span className='text-light-gray-2 flex-none transition-all duration-500 group-hover:-rotate-45 group-hover:text-white'>
+                      <ICONS.rightArrow
+                        width={22}
+                        height={22}
+                      />
+                    </span>
                   </div>
 
-                  <div className='border-dark-gray-3 relative flex h-min w-full flex-none flex-nowrap items-center justify-start gap-3 overflow-visible border-y px-0 py-3'>
-                    <div className='relative flex h-auto w-auto flex-none shrink-0 flex-col whitespace-pre'>
-                      <p className='text-light-gray-2 text-[15px] font-medium'>{item.type}</p>
-                    </div>
-                    <div className='bg-medium-gray relative aspect-square size-1.25 flex-none rounded-full'></div>
-                    <div className='relative flex h-auto w-auto flex-none shrink-0 flex-col whitespace-pre'>
-                      <p className='text-light-gray-2 text-[15px] font-medium'>
-                        {item.pages} Pages
-                      </p>
-                    </div>
-                    <div className='bg-medium-gray relative aspect-square size-1.25 flex-none rounded-full'></div>
-                    <div className='relative flex h-auto w-auto flex-none shrink-0 flex-col whitespace-pre'>
-                      <p className='text-light-gray-2 text-[15px] font-medium'>
-                        {item.theme} Theme
-                      </p>
-                    </div>
+                  <div className='border-dark-gray-3 flex w-full flex-wrap items-center gap-x-3 gap-y-1 border-y px-0 py-3'>
+                    <p className='text-light-gray-2 text-[15px] font-medium'>{item.type}</p>
+                    <span className='bg-medium-gray aspect-square size-1.25 flex-none rounded-full' />
+                    <p className='text-light-gray-2 text-[15px] font-medium'>{item.year}</p>
+                    <span className='bg-medium-gray aspect-square size-1.25 flex-none rounded-full' />
+                    <p className='text-light-gray-2 text-[15px] font-medium'>{item.role}</p>
                   </div>
                 </div>
 
-                <div className='relative flex h-auto w-full flex-none flex-col justify-start wrap-break-word whitespace-pre-wrap'>
-                  <p className='text-light-gray-2 text-[15px] font-medium'>{item.description}</p>
-                </div>
+                <p className='text-light-gray-2 text-[15px] font-medium'>{item.description}</p>
               </div>
-            </div>
+            </Link>
           </motion.div>
         ))}
       </div>
+
       {isMore && (
         <div className='relative block h-auto w-full flex-1'>
           <Link
-            href={`/services`}
+            href='/services'
             className='bg-almost-black border-dark-gray-4 group hover:bg-dark-gray-4 relative flex h-min w-full cursor-pointer flex-nowrap items-center justify-center gap-1.5 overflow-visible rounded-[10px] border p-[14px_18px] transition-all duration-500'
           >
             <div className='relative flex h-auto w-auto flex-none shrink-0 justify-start whitespace-pre opacity-70 transition-all duration-500 group-hover:opacity-100'>

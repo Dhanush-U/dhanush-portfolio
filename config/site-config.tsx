@@ -242,47 +242,108 @@ export const SERVICES = [
 export const SHOW_CASE_PROJECTS = [
   {
     id: 1,
+    slug: 'spectra',
     title: 'Spectra Website Redesign',
-    description:
-      'Led a full redesign and rebuild, preserving SEO rankings while lifting conversions across all devices.',
-    link: 'wpspectra.com',
     type: 'Product Website',
-    theme: 'Dark',
-    pages: 8,
+    year: '2024 - 2025',
+    role: 'Design & Build',
     image: '/images/projects/project-1.webp',
+    description:
+      "Led a full redesign and rebuild of the Spectra website — preserving SEO rankings while lifting conversions across every device.",
+    overview:
+      "Spectra is Brainstorm Force's block-based website builder for WordPress. I led the complete redesign and rebuild of its marketing website, from first Figma explorations through to the live production pages.",
+    challenge:
+      "Modernise a large, content-heavy product site and make it far more conversion-focused — without losing the hard-won SEO rankings the existing site already held.",
+    contributions: [
+      "Redesigned the full site in Figma with conversion-focused layouts.",
+      "Rebuilt the pages to be fast and fully responsive across all devices.",
+      "Contributed scalable UI patterns and templates to keep the product consistent.",
+      "Shipped a Marquee Gutenberg block end to end, from Figma to production.",
+    ],
+    outcome: [
+      "SEO rankings preserved through the migration.",
+      "More conversion-focused layouts across the site.",
+      "Faster page delivery thanks to the reusable pattern library.",
+    ],
+    links: [{ label: 'Visit website', url: 'https://wpspectra.com' }],
+    gallery: [],
   },
   {
     id: 2,
-    title: 'Spectra Marquee Block',
-    description:
-      'Designed and shipped a Gutenberg block end to end, from Figma to production, via a GitHub workflow.',
-    link: 'wpspectra.com',
-    type: 'WordPress Block',
-    theme: 'Dark',
-    pages: 1,
+    slug: 'surecart',
+    title: 'SureCart Website Redesign',
+    type: 'Product Website',
+    year: '2024 - Present',
+    role: 'Design & Build',
     image: '/images/projects/project-2.webp',
+    description:
+      "Redesigned and rebuilt the SureCart website on WordPress — turning a complex e-commerce platform into a clear, conversion-focused story.",
+    overview:
+      "SureCart is Brainstorm Force's e-commerce platform for WordPress. I handled the redesign and rebuild of its website, keeping everything on WordPress while presenting a feature-rich product simply.",
+    challenge:
+      "Communicate a powerful, many-featured commerce platform in a way that feels simple and drives sign-ups — while keeping performance and SEO strong.",
+    contributions: [
+      "Redesigned the website in Figma around a clear, conversion-focused narrative.",
+      "Built responsive, performance-minded pages on WordPress.",
+      "Kept the visual language consistent with the wider product family.",
+    ],
+    outcome: [
+      "A clearer product story that's easier for visitors to follow.",
+      "A modern, responsive site aligned with the brand.",
+    ],
+    links: [{ label: 'Visit website', url: 'https://surecart.com' }],
+    gallery: [],
   },
   {
     id: 3,
-    title: 'GSAP Animation Suite',
-    description:
-      'Built 10+ interactive scroll and motion animations that increased user engagement by 30%.',
-    link: 'cubicdesignz.com',
-    type: 'Interactive',
-    theme: 'Dark',
-    pages: 3,
+    slug: 'surecart-plugin',
+    title: 'SureCart Plugin UI/UX',
+    type: 'Product UI/UX',
+    year: '2024 - Present',
+    role: 'UI/UX & Onboarding',
     image: '/images/projects/project-3.webp',
+    description:
+      "Designed the in-dashboard UI/UX for the SureCart WordPress plugin, including a smoother onboarding experience.",
+    overview:
+      "Beyond the website, I worked on the UI/UX of the SureCart plugin itself — the interface store owners use inside their WordPress dashboard — with a focus on the onboarding experience.",
+    challenge:
+      "Make a powerful e-commerce plugin feel approachable from the very first run, so new store owners can get set up without friction.",
+    contributions: [
+      "Designed plugin interface flows in Figma.",
+      "Shaped the onboarding UX so new users reach value faster.",
+      "Kept patterns consistent with the SureCart design system.",
+    ],
+    outcome: [
+      "A smoother, clearer onboarding for new store owners.",
+      "More consistent UI across the plugin.",
+    ],
+    links: [{ label: 'View on WordPress.org', url: 'https://wordpress.org/plugins/surecart/' }],
+    gallery: [],
   },
   {
     id: 4,
-    title: 'Client Website Collection',
-    description:
-      'A set of responsive WordPress and Shopify sites delivered across industries, focused on UX and speed.',
-    link: 'fyerx.com',
-    type: 'Web Design',
-    theme: 'Light',
-    pages: 30,
+    slug: 'msf-clinic',
+    title: 'MSF Clinic Website',
+    type: 'Business Website',
+    year: '2024',
+    role: 'Design & WordPress Build',
     image: '/images/projects/project-4.webp',
+    description:
+      "A complete clinic website designed and built on WordPress. CHANGE: add a one-line summary of this project.",
+    overview:
+      "CHANGE: Describe MSF Clinic — what it is, who it's for, and your role designing and building the full website on WordPress.",
+    challenge:
+      "CHANGE: What problem were you solving for this clinic (e.g. appointments, trust, clarity, mobile users)?",
+    contributions: [
+      "CHANGE: what you designed",
+      "CHANGE: what you built on WordPress",
+      "CHANGE: any extra work (SEO, performance, content)",
+    ],
+    outcome: [
+      "CHANGE: the result or impact",
+    ],
+    links: [],
+    gallery: [],
   },
 ];
 
