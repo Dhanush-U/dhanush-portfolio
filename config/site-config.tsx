@@ -67,7 +67,7 @@ export const SOCIAL_LINKS = [
   {
     label: 'Behance',
     icon: ICONS.socials.behance,
-    link: 'https://www.behance.net/dhanushu', // CHANGE: confirm your exact Behance URL
+    link: 'https://www.behance.net/dhanushu1', // CHANGE: confirm your exact Behance URL
   },
 ];
 
@@ -515,7 +515,7 @@ export const FOLLOWERS_DATA = [
   {
     platform: 'Behance',
     followers: 'View my work',
-    url: 'https://www.behance.net/dhanushu',
+    url: 'https://www.behance.net/dhanushu1',
     icon: ICONS.socials.behance,
   },
   {
