@@ -373,28 +373,44 @@ export const SHOW_CASE_PROJECTS = [
 export const TESTINOMIALS = [
   {
     id: 1,
-    name: 'Client name',
+    name: 'Nasif',
     description:
       'Dhanush turned our outdated website into a fast, modern, conversion-focused experience. The attention to detail stood out.',
-    location: 'Add location',
+    location: 'West Bengal, India',
     avatar: '/images/clients/client-1.webp',
   },
   {
     id: 2,
-    name: 'Client name',
+    name: 'Selvam',
     description:
-      'Clear communication, sharp design sense, and he ships his own code. The project came in polished and on time.',
-    location: 'Add location',
+      'Clear communication, sharp design sense. The project came in polished and on time.',
+    location: 'Palani, Tamil Nadu',
     avatar: '/images/clients/client-2.webp',
   },
   {
     id: 3,
-    name: 'Client name',
+    name: 'Shilpa',
     description:
       'Our landing page conversions improved noticeably after the redesign. Highly recommend working with him.',
-    location: 'Add location',
+    location: 'singapore',
     avatar: '/images/clients/client-3.webp',
   },
+  {
+  id: 4,
+  name: 'Dr. M.S. Haque',
+  description:
+    'Dhanush redesigned our clinic website from scratch and handled the full migration without losing a single blog ranking. Our organic traffic noticeably improved after launch — the SEO and performance work made a real difference.',
+  location: 'Kolkata, West Bengal',
+  avatar: '/images/clients/client-1.webp',
+},
+{
+  id: 5,
+  name: 'Naveen',
+  description:
+    "Dhanush doesn't just design — he ships. From Figma to production, he owns the whole thing, catches issues before they land, and always comes with a solution. Rare to find that in a designer.",
+  location: 'Chennai, Tamil Nadu',
+  avatar: '/images/clients/client-5.webp',
+},
 ];
 
 export const SERVICES_PLANS = [
