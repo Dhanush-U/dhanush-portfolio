@@ -251,7 +251,7 @@ export const SHOW_CASE_PROJECTS = [
     description:
       "Led a full redesign and rebuild of the Spectra website — preserving SEO rankings while lifting conversions across every device.",
     overview:
-      "Spectra is Brainstorm Force's block-based website builder for WordPress. I led the complete redesign and rebuild of its marketing website, from first Figma explorations through to the live production pages.",
+      "Spectra is Brainstorm Force's block-based WordPress page builder, shipped with 400+ UI patterns and 50+ pre-built templates. I led the complete redesign and rebuild of its marketing website, from first Figma explorations through to live production pages — and played an active role in product quality and release cycles.",
     challenge:
       "Modernise a large, content-heavy product site and make it far more conversion-focused — without losing the hard-won SEO rankings the existing site already held.",
     contributions: [
@@ -259,11 +259,14 @@ export const SHOW_CASE_PROJECTS = [
       "Rebuilt the pages to be fast and fully responsive across all devices.",
       "Contributed scalable UI patterns and templates to keep the product consistent.",
       "Shipped a Marquee Gutenberg block end to end, from Figma to production.",
+      "Led quality and UAT testing across plugin releases — flagging issues and proposing ideal solutions from both a UI and implementation perspective.",
+      "Played a major role in new version release cycles, ensuring shipped features met design and experience standards.",
     ],
     outcome: [
       "SEO rankings preserved through the migration.",
       "More conversion-focused layouts across the site.",
       "Faster page delivery thanks to the reusable pattern library.",
+      "Cleaner releases with fewer post-launch issues through structured QA and solution-first feedback.",
     ],
     links: [{ label: 'Visit website', url: 'https://wpspectra.com' }],
     gallery: [],
@@ -271,25 +274,32 @@ export const SHOW_CASE_PROJECTS = [
   {
     id: 2,
     slug: 'surecart',
-    title: 'SureCart Website Redesign',
+    title: 'SureCart Website',
     type: 'Product Website',
     year: '2024 - Present',
     role: 'Design & Build',
     image: '/images/projects/project-2.webp',
     description:
-      "Redesigned and rebuilt the SureCart website on WordPress — turning a complex e-commerce platform into a clear, conversion-focused story.",
+      "Designed and built the SureCart website from scratch on WordPress — turning a complex e-commerce platform into a clear, conversion-focused story.",
     overview:
-      "SureCart is Brainstorm Force's e-commerce platform for WordPress. I handled the redesign and rebuild of its website, keeping everything on WordPress while presenting a feature-rich product simply.",
+      "SureCart is Brainstorm Force's e-commerce platform for WordPress. I owned the full website from design through to delivery — working across design, development, marketing, and analytics to ship a site that converts and performs.",
     challenge:
-      "Communicate a powerful, many-featured commerce platform in a way that feels simple and drives sign-ups — while keeping performance and SEO strong.",
+      "The existing site lacked clear CTAs, a structured sign-up flow, and a coherent onboarding journey — making it hard for visitors to understand the product and convert. Every page needed to tell a clearer story and drive action.",
     contributions: [
-      "Redesigned the website in Figma around a clear, conversion-focused narrative.",
-      "Built responsive, performance-minded pages on WordPress.",
-      "Kept the visual language consistent with the wider product family.",
+      "Designed the full website from scratch in Figma, homepage through all inner pages.",
+      "Built a conversion-focused structure with clear CTAs and a guided sign-up journey.",
+      "Implemented proper on-page SEO across all pages.",
+      "Created a unified design system for the SureCart website and plugin.",
+      "Worked closely with developers to implement designed workflows accurately, reviewing and validating builds throughout.",
+      "Collaborated with the marketing team on website content, messaging, and campaign landing pages.",
+      "Tracked analytics and performance post-launch, feeding insights back into iterative improvements.",
+      "Took full ownership of the project end to end — leading decisions, coordinating across teams, and delivering successfully.",
     ],
     outcome: [
-      "A clearer product story that's easier for visitors to follow.",
-      "A modern, responsive site aligned with the brand.",
+      "A clearer product story with a structured conversion and onboarding journey.",
+      "A fully redesigned, SEO-optimised website built on WordPress.",
+      "A shared design system used across the website and plugin.",
+      "Stronger cross-team alignment between design, development, and marketing.",
     ],
     links: [{ label: 'Visit website', url: 'https://surecart.com' }],
     gallery: [],
@@ -303,19 +313,25 @@ export const SHOW_CASE_PROJECTS = [
     role: 'UI/UX & Onboarding',
     image: '/images/projects/project-3.webp',
     description:
-      "Designed the in-dashboard UI/UX for the SureCart WordPress plugin, including a smoother onboarding experience.",
+      "Redesigned the UX and UI across two SureCart platforms — the WordPress dashboard plugin and the SaaS web app — with a focus on onboarding and conversion.",
     overview:
-      "Beyond the website, I worked on the UI/UX of the SureCart plugin itself — the interface store owners use inside their WordPress dashboard — with a focus on the onboarding experience.",
+      "SureCart runs across two interfaces: a WordPress dashboard plugin and a standalone SaaS platform. I took ownership of the UX and UI across both — rethinking onboarding, designing workflows for different business types, collaborating closely with developers, and shipping UI improvements across the product.",
     challenge:
-      "Make a powerful e-commerce plugin feel approachable from the very first run, so new store owners can get set up without friction.",
+      "The onboarding journey was built for a single user type, but SureCart serves multiple business workflows — including two distinct internal products at Brainstorm Force. Conversion rates through onboarding were low, and the journey didn't account for the different ways teams actually set up and use the platform.",
     contributions: [
-      "Designed plugin interface flows in Figma.",
-      "Shaped the onboarding UX so new users reach value faster.",
-      "Kept patterns consistent with the SureCart design system.",
+      "Mapped and redesigned the onboarding UX for both the WordPress plugin and the SaaS platform.",
+      "Created separate workflow journeys for different business types and internal product use cases.",
+      "Designed UI improvements and new interface flows in Figma for both platforms.",
+      "Contributed UI components and patterns consistent with the SureCart design system.",
+      "Worked closely with developers throughout implementation — reviewing builds, flagging deviations, and ensuring the shipped product matched the designed experience.",
+      "Tested new features across both platforms, identifying issues and proposing clear UI and implementation solutions.",
+      "Led key UX initiatives end to end, taking full ownership from problem definition through to delivery.",
     ],
     outcome: [
-      "A smoother, clearer onboarding for new store owners.",
-      "More consistent UI across the plugin.",
+      "A clearer, more structured onboarding journey across both platforms.",
+      "Separate workflows designed for different business types, reducing friction for new users.",
+      "More consistent UI across the WordPress plugin and SaaS dashboard.",
+      "Tighter design-to-development handoff with fewer post-launch issues.",
     ],
     links: [{ label: 'View on WordPress.org', url: 'https://wordpress.org/plugins/surecart/' }],
     gallery: [],
@@ -323,26 +339,31 @@ export const SHOW_CASE_PROJECTS = [
   {
     id: 4,
     slug: 'msf-clinic',
-    title: 'MSF Clinic Website',
+    title: 'MSHaque Clinic Website',
     type: 'Business Website',
     year: '2024',
-    role: 'Design & WordPress Build',
+    role: 'Design, WordPress Build & Marketing',
     image: '/images/projects/project-4.webp',
     description:
-      "A complete clinic website designed and built on WordPress. CHANGE: add a one-line summary of this project.",
+      "Designed and built a full Ayurvedic clinic website on WordPress — migrated from an old platform, optimised for SEO, and backed by a complete digital marketing setup.",
     overview:
-      "CHANGE: Describe MSF Clinic — what it is, who it's for, and your role designing and building the full website on WordPress.",
+      "MSHaque Clinic is one of India's most trusted Ayurvedic and Unani clinics, with 35+ years of expertise and branches across Kolkata, Patna, and other cities. The client needed a unique, marketing-focused website that put their doctors and treatments front and centre — something the healthcare space largely lacked. I handled the full project end to end: design, WordPress build, platform migration, SEO, and ongoing digital marketing.",
     challenge:
-      "CHANGE: What problem were you solving for this clinic (e.g. appointments, trust, clarity, mobile users)?",
+      "The existing website was on a different platform, underperforming on SEO, and not built for conversions or trust-building. The new site needed to look premium and modern while preserving all existing blog SEO rankings through the migration — and then go further with a full marketing setup on top.",
     contributions: [
-      "CHANGE: what you designed",
-      "CHANGE: what you built on WordPress",
-      "CHANGE: any extra work (SEO, performance, content)",
+      "Designed a unique, doctor-focused clinic website in Figma — built for trust, clarity, and conversions.",
+      "Built the full site on WordPress, migrating from the old platform without losing any blog SEO rankings.",
+      "Optimised the existing blog design and all on-page SEO across the site.",
+      "Set up and managed the complete digital marketing stack — SEO, GEO targeting, social media management, and Meta ads.",
+      "Took full ownership of the project end to end, delivering a complete package the client was 100% satisfied with.",
     ],
     outcome: [
-      "CHANGE: the result or impact",
+      "A modern, conversion-focused clinic website live on WordPress.",
+      "All existing blog SEO rankings preserved through the platform migration.",
+      "A full digital marketing setup running — ads, social, SEO, and GEO.",
+      "100% client satisfaction on delivery.",
     ],
-    links: [],
+    links: [{ label: 'Visit website', url: 'https://mshaqueclinic.com' }],
     gallery: [],
   },
 ];

@@ -47,15 +47,16 @@ export default function ShowCaseProjects({
               aria-label={`Read the ${item.title} case study`}
               className='group bg-very-dark-gray border-dark-gray-3 hover:border-dark-gray-4 relative flex h-min w-full flex-col flex-nowrap items-center justify-start gap-5 overflow-visible rounded-xl border p-4 transition-all lg:flex-row lg:p-[8px_24px_8px_8px]'
             >
-              <div className='ring-border-color/30 relative h-full min-h-45 w-full overflow-hidden rounded-xl ring-1 lg:flex-1'>
+              <div className='ring-border-color/30 relative h-full min-h-64 w-full overflow-hidden rounded-xl ring-1 lg:flex-1'>
                 <figure className='relative inset-0 h-full w-full rounded-xl lg:absolute'>
                   <Image
                     src={item.image}
                     className='block h-full w-full rounded-[inherit] object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]'
-                    height={180}
-                    width={180}
+                    fill
+                    sizes='(max-width: 1024px) 100vw, 480px'
                     alt={item.title}
-                  />
+                    quality={90}
+                    />
                 </figure>
               </div>
 
