@@ -2,6 +2,17 @@ import { StackIcons } from '@/components/stack-icons';
 import { ICONS } from '@/components/icons';
 import { Home, Mail, User, Zap } from 'lucide-react';
 
+const CompanyLogo = ({ width = 30, height = 30, className = '', 'aria-label': ariaLabel = '' }: { width?: number; height?: number; className?: string; 'aria-label'?: string }) => (
+  <svg width={width} height={height} className={className} aria-label={ariaLabel} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 21h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <rect x="5" y="10" width="6" height="11" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+    <rect x="13" y="6" width="6" height="15" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+    <rect x="7" y="13" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+    <rect x="15" y="9" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+    <rect x="15" y="13" width="2" height="2" rx="0.3" fill="currentColor" opacity="0.5"/>
+  </svg>
+);
+
 export const SITE_CONFIG = {
   profile: {
     name: 'Dhanush',
@@ -141,7 +152,7 @@ export const EXPERIENCE_LISTS = [
     description:
        "I design across Brainstorm Force's flagship WordPress products — Astra, Spectra, SureCart, and ZipWP — shaping interfaces and a large, consistent design system. I led the redesigns of both the Spectra and SureCart websites, preserving their SEO rankings while making them more conversion-focused, and handled the UI/UX for the SureCart plugin, including its onboarding experience, from Figma to production.",
     link: 'brainstormforce.com',
-    logo: ICONS.experienceCompaniesLogos.Vortex,
+    logo: CompanyLogo,
   },
   {
     id: 2,
@@ -152,7 +163,7 @@ export const EXPERIENCE_LISTS = [
     description:
       'At Cubic Designz I designed and built interactive, motion-rich interfaces, including smooth GSAP animations that lifted user engagement by around 30%. Beyond the design work, I improved SEO and page speed, and mentored a small team of five to help everyone ship cleaner work, faster.',
     link: 'cubicdesignz.com', 
-    logo: ICONS.experienceCompaniesLogos.PixelWorks,
+    logo: CompanyLogo,
   },
   {
     id: 3,
@@ -163,7 +174,7 @@ export const EXPERIENCE_LISTS = [
     description:
       'This was my first full-time role, where I designed and launched 50+ responsive websites for clients across a range of industries using WordPress and Shopify. I focused on clean, user-friendly design and strong performance — growing organic traffic by 40% and cutting page load times by nearly a third.',
     link: 'fyerx.com',
-    logo: ICONS.experienceCompaniesLogos.Athon,
+    logo: CompanyLogo,
   },
 ];
 
