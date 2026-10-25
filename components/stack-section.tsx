@@ -5,6 +5,7 @@ import StackLists from './stack-lists';
 export default function StackSection() {
   return (
     <section
+      id="stack"
       className='relative flex h-min w-full flex-none flex-col flex-nowrap items-start justify-start gap-7.5 overflow-visible'
       aria-labelledby='my-stacks'
     >

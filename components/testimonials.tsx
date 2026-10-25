@@ -10,6 +10,7 @@ import { TESTINOMIALS } from '@/config/site-config';
 export default function Testimonials() {
   return (
     <section
+      id="testimonials"
       aria-labelledby='testimonials - Words From Happy Clients'
       className='relative flex h-min w-full flex-none flex-col flex-nowrap items-start justify-start gap-7.5 overflow-visible'
     >

@@ -5,6 +5,7 @@ import ServicesSection from '@/components/services-section';
 import ShowCaseProjects from '@/components/show-case-projects';
 import StackSection from '@/components/stack-section';
 import Testimonials from '@/components/testimonials';
+import CustomCursor from '@/components/custom-cursor';
 import { SITE_CONFIG } from '@/config/site-config';
 import { createPersonSchema, createWebsiteSchema } from '@/lib/json-ld';
 import { createMetadata } from '@/lib/seo';
@@ -21,15 +22,12 @@ export default function Home() {
   return (
     <>
       <JsonLd data={[personSchema, websiteSchema]} />
-
+      <CustomCursor showPill={true} />
       <HeroSection />
       <ExperienceSection />
       <StackSection />
       <ServicesSection />
-      <ShowCaseProjects
-        isMore
-        showData={2}
-      />
+      <ShowCaseProjects isMore showData={2} />
       <Testimonials />
     </>
   );

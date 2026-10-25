@@ -9,6 +9,7 @@ import Providers from '@/components/providers';
 import Preloader from '@/components/preloader';
 import ScrollToTop from '@/components/scroll-to-top';
 import { siteConfig } from '@/lib/seo';
+import CustomCursor from '@/components/custom-cursor';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -69,6 +70,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <CustomCursor showPill={false} />
         <ScrollToTop />
         <Preloader />
         <Providers>

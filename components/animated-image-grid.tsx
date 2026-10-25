@@ -30,13 +30,13 @@ const AnimatedImageGrid: React.FC<AnimatedImageGridProps> = ({ image }) => {
   }, []);
 
   return (
-    <div className='bg-image-bg border-border-color/20 relative aspect-auto h-auto w-44 flex-none rounded-xl border sm:w-65'>
+    <div className='bg-image-bg border-border-color/20 relative aspect-auto h-auto w-44 flex-none rounded-[10px] border sm:w-65 overflow-hidden'>
       <Image
         src={image}
         alt='Profile image'
         width={300}
         height={300}
-        className='h-full w-full object-cover'
+        className='h-full w-full object-cover rounded-[10px]'
         preload
         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       />

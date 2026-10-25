@@ -5,6 +5,7 @@ import ServiceItemLists from './service-item-lists';
 export default function ServicesSection() {
   return (
     <section
+      id="services"
       aria-labelledby='my-services'
       className='relative flex h-min w-full flex-none flex-col flex-nowrap items-start justify-start gap-7.5 overflow-visible'
     >
